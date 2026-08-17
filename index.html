@@ -549,7 +549,7 @@ img{display:block;max-width:100%}
     <img class="meb-logo" src="gorseller/meb.png" alt="Millî Eğitim Bakanlığı" onerror="this.style.visibility='hidden'">
     <button class="dugme" onclick="basla()">Başla</button>
     <div class="acilis-ikonlar">
-      <button class="simge-dugme" id="yardim-dugme" onclick="ikonRehberiAc()" title="Bilgi"></button>
+      <button class="simge-dugme" id="yardim-dugme" onclick="ikonRehberiAc()" title="Bilgi Butonu"></button>
       <button class="simge-dugme" id="ses-toggle" onclick="sesiDegistir()" title="Ses"></button>
       <button class="simge-dugme" id="tam-ekran-1" onclick="tamEkran()" title="Tam ekran"></button>
     </div>
@@ -784,7 +784,7 @@ const IKON_REHBER = [
   {ikon:"tekrar",    ad:"Tekrar dinle",   ses:"sesler/ikon_tekrar.mp3"},
   {ikon:"ileri",     ad:"İleri git",      ses:"sesler/ikon_ileri.mp3"},
   {ikon:"tamEkran",  ad:"Tam ekran",      ses:"sesler/ikon_tamekran.mp3"},
-  {ikon:"yardim",    ad:"Bilgi",          ses:"sesler/ikon_bilgi.mp3"}
+  {ikon:"yardim",    ad:"Bilgi Butonu",          ses:"sesler/ikon_bilgi.mp3"}
 ];
 function ikonRehberiAc(){
   const kap = $("#ikon-liste");
