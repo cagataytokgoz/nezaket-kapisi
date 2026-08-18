@@ -712,7 +712,7 @@ const BOLUMLER = [
       {metin:"Oyunun içine girmeli.",geri:"Oyun sürüyor. Haber vermeden girmek oyunu bozar."}],
     diyalog:"Lina: “Ben de oyuna katılabilir miyim?”"},
   dinle:{replik:"Bora “Şu anda bu turu tamamlıyoruz. Turumuz bitince birlikte oynayabiliriz.” dedi.",
-    secenekler:[{metin:"Bu tur bitince birlikte oynayabilirmişiz.",dogru:true},
+    secenekler:[{metin:"Bu tur bitince birlikte oynayabilirlermiş.",dogru:true},
       {metin:"Lina oyuna hiç katılamazmış.",geri:"Bora tam tersini söyledi. Tur bitince birlikte oynayabileceklerini söyledi."},
       {metin:"Lina'yı oyunda istemiyormuş.",geri:"Bora öyle demedi. Sadece biraz beklemesini istedi."}]},
   saygi:["Biraz bekleyebilirim.","Başka bir oyun oynayabilirim.","Turları bitince katılabilirim."]
@@ -1174,7 +1174,7 @@ function adimSaygi(){
   ileriKapat();
   const b = BOLUMLER[aktifBolum];
   kapiDurumu("acik","acik","aktif");
-  etiketAyarla("3. KAPI · KARAR SENİN");
+  etiketAyarla("3. KAPI · SAYGI DUY");
   $("#soru-metin").textContent = "Şimdi sen ne yaparsın?";
   uyariGoster("");
   /* 3. kapıda yanlış yok: şıklar açık kalır, çocuk istediği kadar
