@@ -635,7 +635,7 @@ img{display:block;max-width:100%}
     <div class="kalkan-isik"></div>
     <div class="kalkan-gorsel" id="kalkan-gorsel-1"></div>
   </div>
-  <p class="kalkan-alt">Üç anahtarı da kullandın! Önce sordun, sonra dinledin ve karşındaki kişinin kararına saygı gösterdin. Başkalarının sınırına saygı duymak da nezakettir.</p>
+  <p class="kalkan-alt">Üç anahtarı da buldun! Sormak, dinlemek, saygı göstermek. Nezaket Kalkanı işte böyle çalışır. Sen de bir arkadaşının sınırına saygı duyduğunda nezaket kalkanın parlayacak.</p>
   <button class="dugme" onclick="bitir()">Bitir</button>
 </section>
 
@@ -648,7 +648,7 @@ img{display:block;max-width:100%}
     <div class="kalkan-isik"></div>
     <div class="kalkan-gorsel" id="kalkan-gorsel-2"></div>
   </div>
-  <p class="kalkan-alt">Üç anahtarı da kullandın! Önce sordun, sonra dinledin ve karşındaki kişinin kararına saygı gösterdin. Nezaket Kalkanın işte böyle çalışır! Başkalarının sınırına saygı duymak da nezakettir.</p>
+  <p class="kalkan-alt">Üç anahtarı da buldun! Sormak, dinlemek, saygı göstermek. Nezaket Kalkanı işte böyle çalışır. Sen de bir arkadaşının sınırına saygı duyduğunda nezaket kalkanın parlayacak.</p>
   <button class="dugme" onclick="bitir()">Bitir</button>
 </section>
 
@@ -1024,11 +1024,18 @@ function dogruAkis(dugme, kapiAc, sonraki, efektVar){
   dugme.classList.add("dogru");
   digerleriniSoluklastir(dugme);
   seceneklerKilitle();
-  if(efektVar) efektCal("sesler/ses_dogru.mp3");
-  setTimeout(()=> anahtarOyna(()=>{
+  if(efektVar){
+    /* çocuk kendi bulduysa: efekt + anahtar animasyonu */
+    efektCal("sesler/ses_dogru.mp3");
+    setTimeout(()=> anahtarOyna(()=>{
+      kapiAc();
+      ileriKur(()=> setTimeout(sonraki, 150));
+    }), 620);
+  } else {
+    /* iki yanlıştan sonra gösterildiyse: anahtar yok, yalnızca doğru cevap */
     kapiAc();
     ileriKur(()=> setTimeout(sonraki, 150));
-  }), efektVar ? 620 : 120);
+  }
 }
 /* İki yanlıştan sonra doğru cevabı kendiliğinden göster */
 function dogruyuGoster(liste, kapiAc, sonraki){
