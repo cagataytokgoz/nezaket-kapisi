@@ -1277,7 +1277,7 @@ function adimSor(){
   const b = BOLUMLER[aktifBolum];
   let yanlis = 0;
   kapiDurumu("aktif","","");
-  etiketAyarla("1. KAPI · SOR");
+  etiketAyarla("1. KAPI · SORALIM");
   $("#soru-metin").textContent = b.sor.soru;
   uyariGoster("");
   const kapiAc = ()=> kapiDurumu("acik","","");
@@ -1307,7 +1307,7 @@ function adimDinle(){
   const b = BOLUMLER[aktifBolum];
   let yanlis = 0;
   kapiDurumu("acik","aktif","");
-  etiketAyarla("2. KAPI · DİNLE");
+  etiketAyarla("2. KAPI · DİNLEYELİM");
   $("#soru-metin").innerHTML = `${b.dinle.replik}<span class="alt-soru">${b.dinle.soru}</span>`;
   uyariGoster("");
   const kapiAc = ()=> kapiDurumu("acik","acik","");
@@ -1337,7 +1337,7 @@ function adimSaygi(){
   const b = BOLUMLER[aktifBolum];
   let yanlis = 0;
   kapiDurumu("acik","acik","aktif");
-  etiketAyarla("3. KAPI · SAYGI DUY");
+  etiketAyarla("3. KAPI · SAYGI DUYALIM");
   $("#soru-metin").textContent = b.saygiSoru;
   uyariGoster("");
   const kapiAc = ()=> kapiDurumu("acik","acik","acik");
